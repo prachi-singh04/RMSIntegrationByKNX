@@ -57,24 +57,6 @@ public class KNXStatusReader implements Runnable, ProcessListener {
         }
     }
 
-    /*private void reconnect() {
-        try {
-            System.out.println("KNX disconnected. Trying to Reconnect ");
-            detachListener();
-            System.out.println("Going to reconnect ");
-            KNXConnectionManager.reconnect();
-            attachListener();
-            //service.queryAllStatus();
-            System.out.println("Reconnected successfully");
-
-            tcpServer.broadcast(
-                    "{\"status\":\"success\",\"message\":\"KNX connection established. You can send commands.\"}"
-            );
-        } catch (Exception e) {
-            System.out.println("Reconnection failed: " + e.getMessage());
-        }
-    }*/
-
     private synchronized void reconnect() {
         try {
             detachListener();
