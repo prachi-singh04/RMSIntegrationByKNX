@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knxDevices type="home-automation">
+
+    <gateway>
+        <ip>10.67.0.100</ip>
+        <port>3671</port>
+    </gateway>
+
+    <!-- Relay Lights -->
+    <light id="A">
+        <name>Load A</name>
+        <groupAddress>1/0/1</groupAddress>
+        <statusAddress>1/0/2</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="B">
+        <name>Load B</name>
+        <groupAddress>1/0/3</groupAddress>
+        <statusAddress>1/0/4</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="C">
+        <name>Load C</name>
+        <groupAddress>1/0/5</groupAddress>
+        <statusAddress>1/0/6</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="D">
+        <name>Load D</name>
+        <groupAddress>1/0/7</groupAddress>
+        <statusAddress>1/0/8</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="E">
+        <name>Load E</name>
+        <groupAddress>1/0/9</groupAddress>
+        <statusAddress>1/0/10</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="F">
+        <name>Load F</name>
+        <groupAddress>1/0/11</groupAddress>
+        <statusAddress>1/0/12</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="G">
+        <name>Load G</name>
+        <groupAddress>1/0/13</groupAddress>
+        <statusAddress>1/0/14</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="H">
+        <name>Load H</name>
+        <groupAddress>1/0/15</groupAddress>
+        <statusAddress>1/0/16</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="I">
+        <name>Load I</name>
+        <groupAddress>1/0/17</groupAddress>
+        <statusAddress>1/0/18</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="J">
+        <name>Load J</name>
+        <groupAddress>1/0/19</groupAddress>
+        <statusAddress>1/0/20</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="S">
+        <name>Load S</name>
+        <groupAddress>1/0/21</groupAddress>
+        <statusAddress>1/0/22</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="T">
+        <name>Load T</name>
+        <groupAddress>1/0/23</groupAddress>
+        <statusAddress>1/0/24</statusAddress>
+        <type>RELAY</type>
+    </light>
+    <light id="U">
+        <name>Load U</name>
+        <groupAddress>1/0/25</groupAddress>
+        <statusAddress>1/0/26</statusAddress>
+        <type>RELAY</type>
+    </light>
+
+    <!-- Dimmable Lights -->
+    <light id="D1">
+        <name>Dimmer Light 1</name>
+        <groupAddress>9/1/1</groupAddress>
+        <statusAddress>9/1/2</statusAddress>
+        <type>DIMMER</type>
+    </light>
+    <light id="D2">
+        <name>Dimmer Light 2</name>
+        <groupAddress>9/1/3</groupAddress>
+        <statusAddress>9/1/4</statusAddress>
+        <type>DIMMER</type>
+    </light>
+    <light id="D3">
+        <name>Dimmer Light 3</name>
+        <groupAddress>9/1/5</groupAddress>
+        <statusAddress>9/1/6</statusAddress>
+        <type>DIMMER</type>
+    </light>
+    <light id="D4">
+        <name>Dimmer Light 4</name>
+        <groupAddress>9/1/7</groupAddress>
+        <statusAddress>9/1/8</statusAddress>
+        <type>DIMMER</type>
+    </light>
+
+    <!-- AC -->
+
+    <ac id="AC1">
+        <name>AC</name>
+
+        <!-- Power -->
+        <power>
+            <type>OneBit</type>
+            <groupAddress>0/3/8</groupAddress>
+            <statusAddress>0/3/8</statusAddress>
+            <onValue>1</onValue>
+            <offValue>4</offValue>
+        </power>
+
+        <!-- Fan Control -->
+        <fan>
+            <type>OneByte</type>
+            <groupAddress>0/3/15</groupAddress>
+            <statusAddress>0/3/0</statusAddress>
+
+            <low>
+                <value>1</value>
+            </low>
+            <medium>
+                <value>2</value>
+            </medium>
+            <high>
+                <value>3</value>
+            </high>
+            <auto>
+                <groupAddress>0/3/16</groupAddress>
+                <value>0</value>
+            </auto>
+        </fan>
+
+        <!-- Temperature -->
+        <temperature>
+            <type>OneByte</type>
+            <groupAddress>0/3/12</groupAddress>
+            <statusAddress>0/3/6</statusAddress>
+            <baseSetpoint>23</baseSetpoint>
+        </temperature>
+
+        <!-- Temperature Unit -->
+        <unit>
+            <groupAddress>0/3/14</groupAddress>
+            <statusAddress>0/3/14</statusAddress>
+        </unit>
+
+    </ac>
+
+    <!-- Curtains -->
+    <curtain id="C1">
+        <name>Curtain 1</name>
+
+        <!-- UP/DOWN Control -->
+        <control>
+            <groupAddress>1/0/30</groupAddress>
+            <statusAddress>1/0/30</statusAddress>
+            <upValue>1</upValue>
+            <downValue>0</downValue>
+        </control>
+
+        <!-- STOP -->
+        <stop>
+            <groupAddress>1/0/31</groupAddress>
+            <statusAddress>1/0/31</statusAddress>
+            <value>1</value>
+        </stop>
+    </curtain>
+
+</knxDevices>
+
+
+
